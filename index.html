@@ -6,10 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 </head>
 
 <body>
-
+    <main>
+        <div class="header-group">
+            <h2 id="day">Mittwoch</h2>
+            <p id="date">07 August</p>
+        </div>
+        <div class="search-field">
+            <input type="text" class="search-field__input" placeholder="Search">
+            <span class="material-icons search-field__icon">search</span>
+        </div>
+        <div class="new-records">
+            <h2>New task</h2>
+            <div class="new-record__inputs">
+                <input class="new-record__inputs__title" type="text" placeholder="Title">
+                <input class="new-record__inputs__date" type="datetime-local" placeholder="Date">
+            </div>
+            <div class="new-record__buttons">
+                <button class="new-record__buttons__add">Add</button>
+                <button class="new-record__buttons__clear">Clear</button>
+            </div>
+        </div>
+        <div class="todo-block">
+            <h2>List of tasks</h2>
+            <div class="todo-block__buttons">
+                <button class="todo-block__buttons__all">All</button>
+                <button class="todo-block__buttons__active">Active</button>
+                <button class="todo-block__buttons__comleted">Completed</button>
+            </div>
+            <div class="todo-block__tasks">
+                <div class="todo-block__task">
+                    <input type="checkbox" name="" class="todo-block__checkbox">
+                    <p class="todo-block__date">07-08-2024</p>
+                    <p class="todo-block__name">Project 1</p>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>

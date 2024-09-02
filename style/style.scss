@@ -210,7 +210,6 @@ body {
     border-radius: 16px;
     background-color: $main-accent-color;
     margin: 16px 0;
-<<<<<<< HEAD
     &__input {
         height: 56px;
         width: 100%;
@@ -229,26 +228,6 @@ body {
     }
 }
 
-=======
-}
-
-.create-form__input {
-    height: 56px;
-    width: 100%;
-    font-size: 16px;
-    line-height: 24px;
-    border: 1px solid #79747e;
-    border-radius: 4px;
-    background: none;
-    outline: none;
-    transition: all 0.15s linear;
-    padding: 4px 16px;
-}
-
-.create-form__input:focus {
-    border: 2px solid $second-effect-color;
-}
->>>>>>> 32a6f19aeb0724e393f866bb23f9e1c72c635188
 
 .form__buttons-wrapper {
     display: flex;
@@ -268,7 +247,6 @@ body {
     outline: none;
     border-radius: 20px;
     cursor: pointer;
-<<<<<<< HEAD
 
     &--primary {
         color: $main-bg-color;
@@ -281,18 +259,5 @@ body {
         background-color: $main-bg-color;
         border: 1px solid $second-effect-color;
     }
-=======
-}
 
-.form-button--primary {
-    color: $main-bg-color;
-    background-color: $second-effect-color;
-    border: 1px solid $second-effect-color;
-}
-
-.form-button--secondary {
-    color: $second-effect-color;
-    background-color: $main-bg-color;
-    border: 1px solid $second-effect-color;
->>>>>>> 32a6f19aeb0724e393f866bb23f9e1c72c635188
 }

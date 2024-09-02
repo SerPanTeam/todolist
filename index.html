@@ -2,55 +2,83 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style/style.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <title>Document</title>
 </head>
 
 <body>
-    <main>
-        <div class="header-group">
-            <h2 id="day">----</h2>
-            <p id="date">-- ------</p>
-        </div>
-        <div class="search-field">
-            <input type="text" class="search-field__input" placeholder="Поиск">
-            <span class="material-icons search-field__icon">search</span>
-        </div>
-        <h2>Новая запись</h2>
-        <div class="new-record">
-            <div class="new-record__inputs">
-                <input class="new-record__inputs__item" type="text" placeholder="Описание">
-                <input class="new-record__inputs__item" type="datetime-local" placeholder="Date">
-            </div>
-            <div class="new-record__buttons">
-                <button class="form-button new-record__buttons__add">Добавить</button>
-                <button class="form-button new-record__buttons__clear">Очистить</button>
-            </div>
-        </div>
-        <div class="todo-block">
-            <h2>Список дел</h2>
-            <div class="todo-block__buttons">
-                <button class="todo-block__buttons__item todo-block__buttons__all">Все</button>
-                <button class="todo-block__buttons__item todo-block__buttons__active">Активные</button>
-                <button class="todo-block__buttons__item todo-block__buttons__comleted">Завершенные</button>
-            </div>
-            <div class="todo-block__tasks">
-                <div class="todo-block__task">
-                    <input type="checkbox" name="" class="todo-block__checkbox">
-                    <p class="todo-block__date">07-08-2024</p>
-                    <p class="todo-block__name">Project 1</p>
-                </div>
-            </div>
-        </div>
-    </main>
+  <!-- Родитель нашего списка дел -->
+  <div class="todo">
+    <!-- header списка -->
+    <div class="header-group">
+      <h2 class="main-header">Среда</h2>
+      <p class="header__group-subheader">7 августа</p>
+    </div>
+    <!-- Строка поиска -->
+    <div class="search-field">
+      <input type="text" class="search-field__input" placeholder="Поиск" />
+      <span class="search-field__icon material-symbols-rounded">
+        search
+      </span>
+    </div>
 
-    <script src="script.js"></script>
+
+    <!-- Кнопка редактировать посты, либо создать -->
+    <!-- <button class="float-button">
+      <span class="material-symbols-rounded"> edit </span>
+    </button> -->
+
+
+    <!-- Блок создания нового дела -->
+    <h2 class="todo-title">Новая запись</h2>
+    <form class="create-form" id="create-form">
+      <input type="text" class="create-form__input" placeholder="Описание" name="description" id="description" required>
+      <input type="datetime-local" class="create-form__input" placeholder="Date" name="startDate" id="startDate"
+        required>
+      <div class="form__buttons-wrapper">
+        <button class="form-button form-button--primary" type="submit" id="submitBtnClick">
+          Добавить
+        </button>
+        <button class="form-button form-button--secondary" type="reset">
+          Очистить
+        </button>
+      </div>
+    </form>
+
+    <!-- Список кнопок для сортировки списка дел -->
+    <h2 class="todo-title">Список дел</h2>
+    <div class="split-button">
+      <button class="split-button__button split-button__button--active" id="filter-all"
+        onclick="splitButtonClickHandler(this)">
+        <span class="material-symbols-rounded split-button__button-icon">
+          check
+        </span>
+        Все
+      </button>
+      <button class="split-button__button split-button__button--center" id="filter-active"
+        onclick="splitButtonClickHandler(this)">
+        <span class="material-symbols-rounded split-button__button-icon">
+          check
+        </span>
+        Активные
+      </button>
+      <button class="split-button__button" id="filter-done" onclick="splitButtonClickHandler(this)">
+        <span class="material-symbols-rounded split-button__button-icon">
+          check
+        </span>
+        Готовые
+      </button>
+    </div>
+    <ul class="todo-list">
+
+    </ul>
+  </div>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>

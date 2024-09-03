@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 'use strict'
-
-=======
->>>>>>> 32a6f19aeb0724e393f866bb23f9e1c72c635188
 let filter = localStorage.getItem('filter') || 'filter-all';
 setActiveFilter(filter);
 
